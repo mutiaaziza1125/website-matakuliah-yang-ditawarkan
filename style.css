@@ -1,0 +1,222 @@
+/* Mengatur font dan margin global */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header dengan warna hijau dan teks putih */
+header {
+  background-color: #006837; /* Warna hijau */
+  color: white;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Efek bayangan */
+}
+
+header h1 {
+  margin: 0;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  font-weight: normal;
+}
+
+/* Profil di header */
+header .profile {
+  display: flex;
+  align-items: center;
+}
+
+header .profile img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+header .profile span {
+  font-size: 14px;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  background-color: #fff;
+  height: 100%;
+  padding: 20px 0;
+  border-right: 1px solid #ddd;
+  position: fixed;
+  top: 70px; /* Agar tidak tertutup header */
+  left: 0;
+  bottom: 0;
+  z-index: 999;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2); /* Efek bayangan */
+}
+
+/* Tautan di sidebar */
+.sidebar a {
+  display: block;
+  color: #333;
+  text-decoration: none;
+  padding: 10px 20px;
+}
+
+.sidebar a:hover,
+.sidebar a.active {
+  background-color: #e6f5ea; /* Warna hijau terang */
+  color: #006837;
+  font-weight: bold;
+}
+
+/* Sidebar responsif */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 60px;
+    overflow: hidden;
+  }
+
+  .sidebar a {
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .sidebar a span {
+    display: none;
+  }
+}
+
+/* Konten utama */
+.main {
+  margin-left: 260px; /* Memberikan ruang untuk sidebar */
+  padding: 20px;
+  margin-top: 70px; /* Memberikan ruang agar konten tidak tertutup header */
+}
+
+@media (max-width: 768px) {
+  .main {
+    margin-left: 70px;
+  }
+}
+
+/* Breadcrumb */
+.breadcrumb {
+  font-size: 14px;
+  margin-bottom: 20px;
+  padding-left: 20px;
+}
+
+.breadcrumb a {
+  color: #006837; /* Warna hijau untuk tautan */
+  text-decoration: none;
+}
+
+.breadcrumb span {
+  margin: 0 5px;
+}
+
+/* Filter Data */
+.filter-container {
+  background-color: #fff;
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.filter-container h2 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.filter-container input,
+.filter-container select {
+  padding: 8px;
+  width: 150px;
+  box-sizing: border-box;
+  flex: 1;
+  font-size: 12px; /* Mengecilkan teks di input */
+}
+
+/* Tombol refresh */
+.filter-container .refresh-btn {
+  background-color: #006837;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12px; /* Mengecilkan teks tombol */
+}
+
+.filter-container .refresh-btn:hover {
+  background-color: #004d33;
+}
+
+/* Tabel */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+}
+
+table thead {
+  background-color: #006837; /* Warna hijau pada header tabel */
+  color: white;
+}
+
+table thead th {
+  padding: 10px;
+  border: 1px solid #ddd;
+  font-size: 12px; /* Mengecilkan font header */
+}
+
+table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+table tbody tr:hover {
+  background-color: #e6f5ea; /* Warna hijau terang saat di-hover */
+  transition: background-color 0.3s;
+}
+
+table tbody td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: center;
+  font-size: 12px; /* Mengecilkan font dalam tabel */
+}
+
+/* Pagination */
+.pagination {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.pagination button {
+  background-color: #006837; /* Warna hijau */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 12px; /* Mengecilkan font tombol pagination */
+}
+
+.pagination button:hover {
+  background-color: #004d33; /* Warna hijau gelap saat hover */
+}

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mata Kuliah Ditawarkan</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header>
+        <h1>
+            <img src="assets/Logo.png" alt="Logo Universitas" style="width: 60px; height: auto;">
+            SATU Mahasiswa - Universitas Sumatera Utara
+        </h1>
+        <div class="profile">
+            <span>MARTARIANDA GULTOM<br>231712013</span>
+        </div>
+    </header>
+
+    <div class="sidebar">
+        <a href="#">Beranda</a>
+        <a href="#">Tagihan Akademik</a>
+        <a href="#">Mata Kuliah Ditawarkan</a>
+        <a href="#">Kelola KRS</a>
+        <a href="#">Semester Antara</a>
+        <a href="#">Jadwal Ujian</a>
+        <a href="#">Informasi KHS</a>
+        <a href="#">Survei</a>
+        <a href="#">Bimbingan Akademik</a>
+        <a href="#">Banding UKT</a>
+        <a href="#">Wisuda</a>
+    </div>
+
+    <div class="main">
+        <div class="breadcrumb">
+            <a href="#">Beranda</a> <span>&gt;</span> <a href="#">Mata Kuliah Ditawarkan</a>
+        </div>
+
+        <div class="filter-container">
+        
+            <!-- Kode -->
+            <div class="filter-item">
+                <input type="text" id="kodeInput" placeholder="Kode">
+                <button id="searchKodeBtn">Cari</button>
+            </div>
+
+            <!-- Mata Kuliah -->
+            <div class="filter-item">
+                <input type="text" id="mataKuliahInput" placeholder="Mata Kuliah">
+                <button id="searchMataKuliahBtn">Cari</button>
+            </div>
+
+            <!-- Semester -->
+            <div class="filter-item">
+                <select id="semesterFilter">
+                    <option value="">Pilih Semester</option>
+                    <option value="1">Semester 1</option>
+                    <option value="2">Semester 2</option>
+                    <option value="3">Semester 3</option>
+                    <option value="4">Semester 4</option>
+                    <!-- Tambahkan opsi semester lainnya jika perlu -->
+                </select>
+                <p id="selectedSemester">Semester yang dipilih: -</p>
+            </div>
+
+            <!-- Jenis Kelas -->
+            <div class="filter-item">
+                <select id="kelasFilter">
+                    <option>Jenis Kelas</option>
+                    <option value="REGULER">REGULER</option>
+                    <option value="MALAM">MALAM</option>
+                </select>
+            </div>
+
+            <!-- Dosen -->
+            <div class="filter-item">
+                <input type="text" id="dosenInput" placeholder="Dosen">
+                <button id="searchDosenBtn">Cari</button>
+            </div>
+        </div>
+
+        <h3>Daftar Mata Kuliah Ditawarkan 2024</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Kode</th>
+                    <th>Mata Kuliah</th>
+                    <th>Semester</th>
+                    <th>Kelas</th>
+                    <th>Tipe Kelas</th>
+                    <th>Tipe</th>
+                    <th>SKS</th>
+                    <th>Ruangan</th>
+                    <th>Jadwal</th>
+                    <th>Dosen</th>
+                </tr>
+            </thead>
+            <tbody id="course-table-body">
+                <!-- Data Mata Kuliah akan dimasukkan di sini oleh JavaScript -->
+            </tbody>
+        </table>
+        
+        <div class="pagination">
+            <button id="prev-btn">Sebelumnya</button>
+            <button id="next-btn">Berikutnya</button>
+        </div>
+    </div>
+</body>
+</html>
